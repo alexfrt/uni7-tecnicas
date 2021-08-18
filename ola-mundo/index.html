@@ -1,34 +1,84 @@
 <html>
-    <head>
-        <!-- conjunto de informações/scripts/etc que serão utilizados pelo browser -->
-        <title>Olá mundo</title>
-    </head>
-    <body>
-        <!-- elementos visuais da minha página -->
-        <div>
-            <h1>Introdução</h1>
-            <p>Era uma vez...</p>
-            <h1>Capitulo 2</h1>
-            <p>outro parágrafo</p>
-            <p>outro parágrafo</p>
-            <p>outro parágrafo</p>
-            <h1>Conclusão</h1>
-            <p>fim...</p>
-        </div>
 
-        <div>
-            <h1>H1</h1>
-            <h2>H2</h2>
-            <h3>H3</h3>
-            <h4>H4</h4>
-            <h5>H5</h5>
-            <h6>H6</h6>
-        </div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <title>Olá mundo</title>
 
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia volutpat tellus vitae rhoncus. Suspendisse tincidunt, sem sit amet laoreet mattis, dui est congue felis, id sollicitudin dolor eros non mauris. <strong>Placerat posuere purus, vel tempus tortor interdum non.</strong> Morbi euismod magna sapien, sed lacinia neque accumsan vitae. Donec sed turpis sollicitudin, volutpat tellus in, luctus metus. Suspendisse potenti. Donec sit amet metus et sapien lobortis euismod et quis tortor. Mauris placerat, augue vel tincidunt dictum, nulla odio varius lorem, ac semper sem felis vitae nisl. Proin urna ipsum, consectetur fringilla nunc et, luctus auctor augue.</p>
-    
-            <img src="https://www.uni7.edu.br/wp-content/uploads/2017/04/escoladenegocios-uni7-logo.png"/>
-        </div>
-    </body>
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p {
+            background-color:white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 50px;
+            margin-left: 20px;
+            margin-bottom: 50px;
+        }
+
+        div {
+            background-color: chartreuse;
+            padding: 50px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .paragrafosAzuis {
+            background-color: cornflowerblue;
+        }
+
+        .paragrafosLaranjas {
+            background-color: coral;
+        }
+
+        #logoUni7 {
+            width: 250px;
+        }
+
+        #babau {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Introdução</h1>
+        <p>Era uma vez...</p>
+        <h1>Capitulo 2</h1>
+        <p id="paragrafo1" class="paragrafosLaranjas">outro parágrafo</p>
+        <p id="paragrafo2" class="paragrafosLaranjas">outro parágrafo</p>
+        <p id="paragrafo3" class="paragrafosAzuis">outro parágrafo</p>
+        <p id="paragrafo4" class="paragrafosLaranjas">outro parágrafo</p>
+        <p id="paragrafo5" class="paragrafosAzuis">outro parágrafo</p>
+        <p id="paragrafo6" class="paragrafosLaranjas">paragrafo 6</p>
+        <h1>Conclusão</h1>
+        <p>fim...</p>
+    </div>
+
+    <div>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+    </div>
+
+    <div>
+        <p id="babau">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia volutpat tellus vitae rhoncus.
+            Suspendisse tincidunt, sem sit amet laoreet mattis, dui est congue felis, id sollicitudin dolor eros non
+            mauris. <strong>Placerat posuere purus, vel tempus tortor interdum non.</strong> Morbi euismod magna sapien,
+            sed lacinia neque accumsan vitae. Donec sed turpis sollicitudin, volutpat tellus in, luctus metus.
+            Suspendisse potenti <a href="teste.html">Clique aqui</a>. Donec sit amet metus et sapien lobortis euismod et
+            quis tortor. Mauris placerat, augue vel tincidunt dictum, nulla odio varius lorem, ac semper sem felis vitae
+            nisl. Proin urna ipsum, consectetur fringilla nunc et, luctus auctor augue.</p>
+
+        <img id="logoUni7" src="logo-uni7.jpg" />
+    </div>
+</body>
+
 </html>
