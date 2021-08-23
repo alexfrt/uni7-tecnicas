@@ -22,7 +22,6 @@
         div {
             background-color: chartreuse;
             padding: 50px;
-            float: left;
             margin-right: 10px;
         }
 
@@ -37,11 +36,22 @@
         #logoUni7 {
             width: 250px;
         }
-
-        #babau {
-            width: 300px;
-        }
     </style>
+
+    <script>
+        function clicouBotao() {
+            //elementoParagrafo = document.createElement("p");
+            //elementoParagrafo.innerHTML = "Texto do paragrafo";
+            
+            paragrafo1 = document.getElementById("paragrafo1");
+            paragrafo1.innerHTML = "valor modificado!!!";
+
+            elementosLaranjas = document.getElementsByClassName("paragrafosLaranjas");
+            for (i = 0; i < elementosLaranjas.length; i++) {
+                elementosLaranjas[i].style = "background-color:  black";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -57,6 +67,7 @@
         <p id="paragrafo6" class="paragrafosLaranjas">paragrafo 6</p>
         <h1>Conclusão</h1>
         <p>fim...</p>
+        <p></p>
     </div>
 
     <div>
@@ -78,6 +89,27 @@
             nisl. Proin urna ipsum, consectetur fringilla nunc et, luctus auctor augue.</p>
 
         <img id="logoUni7" src="logo-uni7.jpg" />
+    </div>
+
+    <div>
+        <form action="umaURLQualquer">
+            <label>CPF</label>
+            <input name="cpf" type="text" value="valor padrão"/>
+            <br/>
+            <label>Senha</label>
+            <input name="senha" type="password"/>
+            <br/>
+            <label>Hora</label>
+            <input name="hora" type="time" value="06:10"/>
+
+            <input type="button" value="o valor"/>
+            <br/>
+            <input type="submit" value="submit"/>
+            <br/>
+            <input type="reset" value="Limpar os campos"/>
+        </form>
+
+        <button onclick="clicouBotao()">Clique aqui</button>
     </div>
 </body>
 
