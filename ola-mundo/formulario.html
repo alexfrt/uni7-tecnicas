@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <title>Olá mundo</title>
+
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+
+    <script>
+        function clicouBotao() {
+            paragrafo1 = document.getElementById("paragrafo1");
+            paragrafo1.innerHTML = "valor modificado!!!";
+
+            elementosLaranjas = document.getElementsByClassName("paragrafosLaranjas");
+            for (i = 0; i < elementosLaranjas.length; i++) {
+                elementosLaranjas[i].style = "background-color:  black";
+            }
+
+            variavel = {
+                'atributo' : 'valor',
+                'atributo2' : 'valor2',
+                'listaDeObjetos' : [
+                    {}, 1, false, ""
+                ],
+                'outroObjeto' : {
+                    'outroObjeto' : {},
+                    'atributo' : false
+                }
+            };
+            variavel['novoAtributo'] = 'novoValor';
+            delete variavel['novoAtributo'];
+            
+            console.log(variavel);
+        }
+    
+        function incrementarForm() {
+            var nomeDoCampo = document.getElementById("nomeDoCampo").value;
+            var tipoDoCampo = document.getElementById("tipoDoCampo").value;
+            
+            var novoLabel = document.createElement("label");
+            novoLabel.innerHTML = nomeDoCampo;
+
+            var novoInput = document.createElement("input");
+            novoInput.name = nomeDoCampo;
+            novoInput.type = tipoDoCampo;
+            novoInput.className = "inputGerado";
+
+            var formulario = document.getElementById("formularioGerado");
+            formulario.appendChild(novoLabel);
+            formulario.appendChild(novoInput);
+            formulario.appendChild(document.createElement("br"));
+        }
+
+        function logarJSON() {
+            var objeto = {};
+
+            var inputsGerados = document.getElementsByClassName("inputGerado");
+            for (var i = 0; i < inputsGerados.length; i++) {
+                var inputGerado = inputsGerados[i];
+
+                var nomeDoCampo = inputGerado.name;
+                var valorDoCampo = inputGerado.value;
+
+                objeto[nomeDoCampo] = valorDoCampo;
+            }
+
+            console.log(objeto);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h3>Formulário gerador de formulário</h3>
+        <form>
+            <label>Nome: </label>
+            <input id="nomeDoCampo" type="text" name="nome"/><br/>
+            
+            <label>Tipo: </label>
+            <input id="tipoDoCampo" type="text" name="tipo"/><br/>
+           
+            <input type="button" value="Incrementar Formulário" onclick="incrementarForm()"/>
+        </form>
+
+        <h3>Formulário gerado</h3>
+        <form id="formularioGerado">
+            
+            <input type="button" value="Logar JSON" onclick="logarJSON()"/> <br/>
+        </form>
+    </div>
+</body>
+
+</html>
