@@ -50,6 +50,22 @@
             for (i = 0; i < elementosLaranjas.length; i++) {
                 elementosLaranjas[i].style = "background-color:  black";
             }
+
+            variavel = {
+                'atributo' : 'valor',
+                'atributo2' : 'valor2',
+                'listaDeObjetos' : [
+                    {}, 1, false, ""
+                ],
+                'outroObjeto' : {
+                    'outroObjeto' : {},
+                    'atributo' : false
+                }
+            };
+            variavel['novoAtributo'] = 'novoValor';
+            delete variavel['novoAtributo'];
+            
+            console.log(variavel);
         }
     </script>
 </head>
@@ -71,15 +87,6 @@
     </div>
 
     <div>
-        <h1>H1</h1>
-        <h2>H2</h2>
-        <h3>H3</h3>
-        <h4>H4</h4>
-        <h5>H5</h5>
-        <h6>H6</h6>
-    </div>
-
-    <div>
         <p id="babau">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia volutpat tellus vitae rhoncus.
             Suspendisse tincidunt, sem sit amet laoreet mattis, dui est congue felis, id sollicitudin dolor eros non
             mauris. <strong>Placerat posuere purus, vel tempus tortor interdum non.</strong> Morbi euismod magna sapien,
@@ -92,7 +99,7 @@
     </div>
 
     <div>
-        <form action="umaURLQualquer">
+        <form action="umaURLQualquer" method="POST">
             <label>CPF</label>
             <input name="cpf" type="text" value="valor padrão"/>
             <br/>
