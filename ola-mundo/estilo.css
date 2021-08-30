@@ -1,0 +1,30 @@
+body {
+    background-color: aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    background-color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+div {
+    background-color: chartreuse;
+    padding: 50px;
+    margin-right: 10px;
+}
+
+.paragrafosAzuis {
+    background-color: cornflowerblue;
+}
+
+.paragrafosLaranjas {
+    background-color: coral;
+}
+
+#logoUni7 {
+    width: 250px;
+}

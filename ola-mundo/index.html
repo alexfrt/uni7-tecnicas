@@ -5,69 +5,8 @@
     <meta charset="utf-8" />
     <title>Olá mundo</title>
 
-    <style>
-        body {
-            background-color: aqua;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        p {
-            background-color:white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-top: 50px;
-            margin-left: 20px;
-            margin-bottom: 50px;
-        }
-
-        div {
-            background-color: chartreuse;
-            padding: 50px;
-            margin-right: 10px;
-        }
-
-        .paragrafosAzuis {
-            background-color: cornflowerblue;
-        }
-
-        .paragrafosLaranjas {
-            background-color: coral;
-        }
-
-        #logoUni7 {
-            width: 250px;
-        }
-    </style>
-
-    <script>
-        function clicouBotao() {
-            //elementoParagrafo = document.createElement("p");
-            //elementoParagrafo.innerHTML = "Texto do paragrafo";
-            
-            paragrafo1 = document.getElementById("paragrafo1");
-            paragrafo1.innerHTML = "valor modificado!!!";
-
-            elementosLaranjas = document.getElementsByClassName("paragrafosLaranjas");
-            for (i = 0; i < elementosLaranjas.length; i++) {
-                elementosLaranjas[i].style = "background-color:  black";
-            }
-
-            variavel = {
-                'atributo' : 'valor',
-                'atributo2' : 'valor2',
-                'listaDeObjetos' : [
-                    {}, 1, false, ""
-                ],
-                'outroObjeto' : {
-                    'outroObjeto' : {},
-                    'atributo' : false
-                }
-            };
-            variavel['novoAtributo'] = 'novoValor';
-            delete variavel['novoAtributo'];
-            
-            console.log(variavel);
-        }
-    </script>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
