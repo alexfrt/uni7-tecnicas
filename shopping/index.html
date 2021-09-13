@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <script>
+        function cadastrar() {
+            var nome = document.getElementById("nome").value;
+            var cpf = document.getElementById("cpf").value;
+            var endereco = document.getElementById("endereco").value;
+
+            console.log(nome, cpf, endereco);
+
+            //incrementar essa função para acrescentar novas linhas na tabela com o conteúdo do formulário...
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp">
+                    <div id="nomeHelp" class="form-text">O nome da pessoa</div>
+                </div>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" aria-describedby="cpfHelp">
+                    <div id="cpfHelp" class="form-text">O CPF da pessoa</div>
+                </div>
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" aria-describedby="enderecoHelp">
+                    <div id="enderecoHelp" class="form-text">O endereço da pessoa</div>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row bg-secondary text-white ">
+            <div class="col">
+                Nome
+            </div>
+            <div class="col">
+                CPF
+            </div>
+            <div class="col-6">
+                Endereço
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Alex
+            </div>
+            <div class="col">
+                298317381-22
+            </div>
+            <div class="col-6">
+                Rua 7 de setembro, 2311
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Alex
+            </div>
+            <div class="col">
+                298317381-22
+            </div>
+            <div class="col-6">
+                Rua 7 de setembro, 2311
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Alex
+            </div>
+            <div class="col">
+                298317381-22
+            </div>
+            <div class="col-6">
+                Rua 7 de setembro, 2311
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
