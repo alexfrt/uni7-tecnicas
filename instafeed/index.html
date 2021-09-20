@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <title>Instafeed</title>
+
+    <script>
+        function curtir() {
+            var botao = document.getElementById("botaoCurtir");
+            if (botao.innerHTML == "Curtir") {
+                var contador = document.getElementById("contador");
+                var valor = parseInt(contador.innerHTML);
+                contador.innerHTML = valor + 1;
+    
+                botao.innerHTML = "Descutir";
+                botao.classList.replace("btn-primary", "btn-danger");
+            } else {
+                var contador = document.getElementById("contador");
+                var valor = parseInt(contador.innerHTML);
+                contador.innerHTML = valor - 1;
+
+                botao.innerHTML = "Curtir";
+                botao.classList.replace("btn-danger", "btn-primary");
+            }
+        }
+
+        function comentar() {
+            var textDoComentario = document.getElementById("comentario").value;
+            document.getElementById("comentario").value = "";
+
+            var comentariosDiv = document.getElementById("comentarios");
+
+            var row = document.createElement("div");
+            row.classList.add("row");
+            
+            var col = document.createElement("div");
+            row.classList.add("col-6");
+
+            var p = document.createElement("p");
+
+            p.innerHTML = "- " + textDoComentario;
+            col.appendChild(p);
+            row.appendChild(col);
+
+            comentariosDiv.appendChild(row);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/gato.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/panda.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/papagaio.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Descrição e curtidas -->
+                    <div class="col-6">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Necessitatibus eos aperiam autem fugiat maxime quis repellendus iusto ratione illum totam.
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div id="contador">19</div><div> curtidas</div>
+                        </div>
+                        <div class="row">
+                            <button id="botaoCurtir" class="btn btn-primary" onclick="curtir()">Curtir</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="comentarios">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>3 comentários</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>- comentario</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>- comentario</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>- comentario</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>- comentario</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input id="comentario" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-light" onclick="comentar()">Comentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
