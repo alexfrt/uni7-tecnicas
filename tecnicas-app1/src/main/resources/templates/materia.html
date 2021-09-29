@@ -1,0 +1,11 @@
+<html>
+
+    <body>
+        <h1>Diario da UNI7</h1>
+        <div th:each="materia: ${materias}">
+            <h2 th:text="${materia.titulo}"></h2>
+            <p th:text="${materia.texto}"></p>
+        </div>
+    </body>
+
+</html>
