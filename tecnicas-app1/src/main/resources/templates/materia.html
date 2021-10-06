@@ -4,8 +4,18 @@
         <h1>Diario da UNI7</h1>
         <div th:each="materia: ${materias}">
             <h2 th:text="${materia.titulo}"></h2>
-            <p th:text="${materia.texto}"></p>
+            <p th:text="${materia.conteudo}"></p>
         </div>
+
+        <form action="criarMateria" method="post">
+            <label>Titulo</label>
+            <input type="text" name="titulo"/>
+            <label>Autor</label>
+            <input type="text" name="autor"/>
+            <label>Conteúdo</label>
+            <input type="text" name="conteudo"/>
+            <input type="submit" value="Cadastrar Matéria"/>
+        </form>
     </body>
 
 </html>
