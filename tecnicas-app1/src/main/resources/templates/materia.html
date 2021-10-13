@@ -1,25 +1,66 @@
 <html>
 
-    <head>
-        <link rel="stylesheet" href="css/estilo.css">
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <h1>Diario da UNI7</h1>
-        <div th:each="materia: ${materias}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Diário da UNI7
+        </a>
+    </div>
+</nav>
+
+<div class="container" id="materias">
+    <div class="container" th:each="materia: ${materias}">
+        <div class="row">
             <h2 th:text="${materia.titulo}"></h2>
+        </div>
+        <div class="row">
             <p th:text="${materia.conteudo}"></p>
         </div>
+    </div>
+</div>
 
-        <form action="criarMateria" method="post">
-            <label>Titulo</label>
-            <input type="text" name="titulo"/>
-            <label>Autor</label>
-            <input type="text" name="autor"/>
-            <label>Conteúdo</label>
-            <input type="text" name="conteudo"/>
-            <input type="submit" value="Cadastrar Matéria"/>
-        </form>
-    </body>
+<div class="container">
+    <form>
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo"/>
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">Autor</label>
+            <input type="text" class="form-control" id="autor" name="autor"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="conteudo">Conteúdo</label>
+            <input type="text" class="form-control" id="conteudo" name="conteudo"/>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submeterFormulario()">Cadastrar</button>
+    </form>
+</div>
 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
 </html>
