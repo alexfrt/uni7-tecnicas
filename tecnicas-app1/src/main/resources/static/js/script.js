@@ -14,8 +14,22 @@ function submeterFormulario() {
         var materia = JSON.parse(this.responseText);
         console.log(materia);
 
-        //construir blocos de materia...
-        //fazer append nos blocos do HTML
+        var container = document.createElement("div");
+        container.classList.add("container");
+
+        var titulo = document.createElement("div");
+        titulo.classList.add("row");
+        titulo.innerHTML = "<h2>" + materia.titulo + "</h2>";
+
+        var conteudo = document.createElement("div");
+        conteudo.classList.add("row");
+        var p = document.createElement("p");
+        p.innerHTML = materia.conteudo;
+        conteudo.appendChild(p);
+
+        container.appendChild(titulo);
+        container.appendChild(conteudo);
+        document.getElementById("materias").appendChild(container);
     };
 
     var oReq = new XMLHttpRequest();
