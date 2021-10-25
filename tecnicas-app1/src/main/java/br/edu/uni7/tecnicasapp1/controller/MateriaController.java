@@ -20,13 +20,10 @@ public class MateriaController {
         this.materiaRepository = materiaRepository;
     }
 
+    @ResponseBody
     @RequestMapping("materia")
-    public ModelAndView listarMaterias() {
-        ModelAndView modelAndView = new ModelAndView("materia");
-        List<Materia> materias = materiaRepository.read();
-        modelAndView.addObject("materias", materias);
-
-        return modelAndView;
+    public List<Materia> listarMaterias() {
+        return materiaRepository.read();
     }
 
     @ResponseBody

@@ -8,8 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -23,14 +21,6 @@
 </nav>
 
 <div class="container" id="materias">
-    <div class="container" th:each="materia: ${materias}">
-        <div class="row">
-            <h2 th:text="${materia.titulo}"></h2>
-        </div>
-        <div class="row">
-            <p th:text="${materia.conteudo}"></p>
-        </div>
-    </div>
 </div>
 
 <div class="container">
@@ -50,6 +40,8 @@
         <button type="button" class="btn btn-primary" onclick="submeterFormulario()">Cadastrar</button>
     </form>
 </div>
+
+<script src="js/script.js"></script>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
