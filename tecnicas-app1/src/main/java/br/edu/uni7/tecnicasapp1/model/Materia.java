@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Materia {
 
+    private Integer id;
     private String titulo;
     private String autor;
     private String conteudo;
@@ -18,6 +19,14 @@ public class Materia {
         this.autor = autor;
         this.conteudo = conteudo;
         this.data = data;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitulo() {

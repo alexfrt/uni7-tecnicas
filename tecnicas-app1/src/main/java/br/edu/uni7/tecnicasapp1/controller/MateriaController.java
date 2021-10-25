@@ -21,18 +21,36 @@ public class MateriaController {
     }
 
     @ResponseBody
-    @RequestMapping("materia")
+    @RequestMapping(value = "materia/{id}", method = RequestMethod.GET)
+    public Materia encontrarMateria(@PathVariable Integer id) {
+        return materiaRepository.findById(id);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "materia", method = RequestMethod.GET)
     public List<Materia> listarMaterias() {
         return materiaRepository.read();
     }
 
     @ResponseBody
-    @RequestMapping(value = "criarMateria", method = RequestMethod.POST)
-    public Materia criarNovaMateria(@RequestBody Materia materia) {
+    @RequestMapping(value = "materia", method = RequestMethod.POST)
+    public Materia criarMateria(@RequestBody Materia materia) {
         materia.setData(new Date());
         materiaRepository.create(materia);
 
         return materia;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "materia/{id}", method = RequestMethod.DELETE)
+    public void apagarMateria(@PathVariable Integer id) {
+        materiaRepository.delete(id);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "materia/{id}", method = RequestMethod.PUT)
+    public void atualizarMateria(@PathVariable Integer id, @RequestBody Materia materia) {
+        materiaRepository.update(id, materia);
     }
 
 }

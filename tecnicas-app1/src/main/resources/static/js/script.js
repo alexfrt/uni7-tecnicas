@@ -17,7 +17,7 @@ function submeterFormulario() {
 
     let oReq = new XMLHttpRequest();
     oReq.onload = reqListener;
-    oReq.open("POST", "criarMateria", true);
+    oReq.open("POST", "materia", true);
     oReq.setRequestHeader("Content-Type", "application/json");
     oReq.send(JSON.stringify(materia));
 }
