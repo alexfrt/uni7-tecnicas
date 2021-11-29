@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface PecaRepository extends JpaRepository<Peca, Integer> {
 
-    List<Peca> findAllByFabricanteAndQuantidadeGreaterThan(String fabricante, Integer quantidade);
+    List<Peca> findAllByFabricante(String fabricante);
 
 }
